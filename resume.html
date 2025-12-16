@@ -41,9 +41,9 @@
             width: 100%;
             height: 100%;
             background-image: 
-                radial-gradient(circle at 20% 50%, rgba(102, 126, 234, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(102, 126, 234, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 40% 20%, rgba(102, 126, 234, 0.05) 0%, transparent 50%);
+                radial-gradient(circle at 20% 50%, rgba(129, 199, 132, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(165, 214, 167, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 40% 20%, rgba(200, 230, 201, 0.1) 0%, transparent 50%);
             pointer-events: none;
             z-index: 0;
         }
@@ -60,7 +60,7 @@
             border: 2px solid transparent;
             background-image: 
                 linear-gradient(white, white),
-                linear-gradient(135deg, #667eea, #764ba2, #f093fb);
+                linear-gradient(135deg, #81c784, #66bb6a, #a5d6a7);
             background-origin: border-box;
             background-clip: padding-box, border-box;
         }
@@ -72,7 +72,7 @@
             left: -2px;
             right: -2px;
             bottom: -2px;
-            background: linear-gradient(135deg, #667eea, #764ba2, #f093fb);
+            background: linear-gradient(135deg, #81c784, #66bb6a, #a5d6a7);
             border-radius: 10px;
             z-index: -1;
             opacity: 0.3;
@@ -88,7 +88,7 @@
         .header {
             text-align: center;
             padding: 30px 0;
-            background: linear-gradient(135deg, #d3d3d3 0%, #c0c0c0 50%, #d3d3d3 100%);
+            background: linear-gradient(135deg, #c8e6c9 0%, #a5d6a7 50%, #c8e6c9 100%);
             background-size: 200% 200%;
             animation: headerGradient 8s ease infinite;
             margin: -50px -50px 40px -50px;
@@ -154,11 +154,11 @@
 
         /* Objective Section */
         .objective {
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
             padding: 25px;
             border-radius: 10px;
             margin-bottom: 40px;
-            border-left: 5px solid #667eea;
+            border-left: 5px solid #66bb6a;
             box-shadow: 0 5px 15px rgba(0,0,0,0.08);
         }
 
@@ -194,7 +194,7 @@
             margin-bottom: 25px;
             font-size: 1.4em;
             font-weight: 600;
-            border-bottom: 3px solid #667eea;
+            border-bottom: 3px solid #66bb6a;
             padding-bottom: 12px;
             display: flex;
             align-items: center;
@@ -204,7 +204,6 @@
         .summary h2:before {
             content: "💼";
             font-size: 1.2em;
-            animation: rotate 3s linear infinite;
             display: inline-block;
         }
 
@@ -221,10 +220,10 @@
         }
 
         .skill-category {
-            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            background: linear-gradient(135deg, #ffffff 0%, #f1f8e9 100%);
             padding: 20px;
             border-radius: 8px;
-            border-left: 4px solid #667eea;
+            border-left: 4px solid #81c784;
             box-shadow: 0 3px 10px rgba(0,0,0,0.05);
             transition: all 0.3s;
             position: relative;
@@ -238,7 +237,7 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.1), transparent);
+            background: linear-gradient(90deg, transparent, rgba(129, 199, 132, 0.15), transparent);
             transition: left 0.5s;
         }
 
@@ -248,13 +247,13 @@
 
         .skill-category:hover {
             transform: translateY(-3px) scale(1.02);
-            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.2);
+            box-shadow: 0 5px 20px rgba(129, 199, 132, 0.3);
             border-left-width: 6px;
         }
 
         .skill-category strong::before {
             content: "▸ ";
-            color: #667eea;
+            color: #66bb6a;
             font-weight: bold;
             margin-right: 5px;
         }
@@ -286,7 +285,7 @@
             margin-bottom: 35px;
             font-size: 1.4em;
             font-weight: 600;
-            border-bottom: 3px solid #667eea;
+            border-bottom: 3px solid #66bb6a;
             padding-bottom: 12px;
             display: flex;
             align-items: center;
@@ -302,8 +301,8 @@
             content: "15+ years";
             font-size: 0.5em;
             font-weight: 600;
-            color: #667eea;
-            background: rgba(102, 126, 234, 0.1);
+            color: #66bb6a;
+            background: rgba(129, 199, 132, 0.2);
             padding: 4px 10px;
             border-radius: 15px;
             margin-right: 5px;
@@ -333,7 +332,7 @@
             top: 0;
             bottom: 0;
             width: 3px;
-            background: linear-gradient(180deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            background: linear-gradient(180deg, #81c784 0%, #66bb6a 50%, #a5d6a7 100%);
             border-radius: 2px;
             animation: timelinePulse 2s ease-in-out infinite;
         }
@@ -356,31 +355,31 @@
             top: 10px;
             width: 20px;
             height: 20px;
-            background: #667eea;
+            background: #66bb6a;
             border: 4px solid white;
             border-radius: 50%;
-            box-shadow: 0 0 0 3px #667eea, 0 0 10px rgba(102, 126, 234, 0.5);
+            box-shadow: 0 0 0 3px #66bb6a, 0 0 10px rgba(102, 187, 106, 0.5);
             animation: dotPulse 2s ease-in-out infinite;
         }
 
         @keyframes dotPulse {
-            0%, 100% { transform: scale(1); box-shadow: 0 0 0 3px #667eea, 0 0 10px rgba(102, 126, 234, 0.5); }
-            50% { transform: scale(1.2); box-shadow: 0 0 0 5px #667eea, 0 0 20px rgba(102, 126, 234, 0.8); }
+            0%, 100% { transform: scale(1); box-shadow: 0 0 0 3px #66bb6a, 0 0 10px rgba(102, 187, 106, 0.5); }
+            50% { transform: scale(1.2); box-shadow: 0 0 0 5px #66bb6a, 0 0 20px rgba(102, 187, 106, 0.8); }
         }
 
         .timeline-date {
             display: inline-block;
-            color: #667eea;
+            color: #66bb6a;
             font-weight: 600;
             font-size: 0.7em;
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.15), rgba(118, 75, 162, 0.15));
+            background: linear-gradient(135deg, rgba(129, 199, 132, 0.2), rgba(165, 214, 167, 0.2));
             padding: 5px 12px;
             border-radius: 20px;
             margin-bottom: 12px;
             writing-mode: horizontal-tb;
             position: relative;
-            border: 1px solid rgba(102, 126, 234, 0.3);
-            box-shadow: 0 2px 5px rgba(102, 126, 234, 0.2);
+            border: 1px solid rgba(102, 187, 106, 0.4);
+            box-shadow: 0 2px 5px rgba(102, 187, 106, 0.2);
         }
 
         .timeline-date::before {
@@ -390,17 +389,17 @@
         }
 
         .timeline-content {
-            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            background: linear-gradient(135deg, #ffffff 0%, #f1f8e9 100%);
             padding: 25px;
             border-radius: 10px;
-            border-left: 5px solid #667eea;
+            border-left: 5px solid #81c784;
             transition: all 0.3s ease;
             box-shadow: 0 3px 10px rgba(0,0,0,0.08);
         }
 
         .timeline-content:hover {
             transform: translateX(8px) translateY(-2px);
-            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.2);
+            box-shadow: 0 8px 25px rgba(129, 199, 132, 0.25);
             border-left-width: 6px;
         }
 
@@ -411,7 +410,7 @@
         }
 
         .timeline-content .company {
-            color: #667eea;
+            color: #2e7d32;
             font-weight: 600;
             margin-bottom: 5px;
             font-size: 0.85em;
@@ -445,8 +444,8 @@
         }
 
         .education-table thead {
-            background: #d3d3d3;
-            color: #333;
+            background: linear-gradient(135deg, #a5d6a7 0%, #81c784 100%);
+            color: #2c3e50;
         }
 
         .education-table th {
@@ -476,7 +475,7 @@
         }
 
         .education-table .institution {
-            color: #667eea;
+            color: #66bb6a;
             font-weight: 500;
         }
 
@@ -485,82 +484,55 @@
             font-weight: 600;
         }
 
-        /* Hobbies */
-        .hobbies {
-            margin-top: 40px;
-            padding: 25px;
-            background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%);
+        /* AI Tools Table */
+        .ai-tools-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background: white;
             border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(129, 199, 132, 0.1);
         }
 
-        .hobbies h2 {
+        .ai-tools-table thead {
+            background: linear-gradient(135deg, #a5d6a7 0%, #81c784 100%);
             color: #2c3e50;
-            margin-bottom: 20px;
-            font-size: 1.0em;
+        }
+
+        .ai-tools-table th {
+            padding: 15px;
+            text-align: left;
             font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 10px;
+            font-size: 0.9em;
         }
 
-        .hobbies h2:before {
-            content: "🎨";
-            font-size: 1.2em;
-            animation: spin 4s linear infinite;
-            display: inline-block;
+        .ai-tools-table td {
+            padding: 15px;
+            border-bottom: 1px solid #e0e0e0;
+            color: #333;
         }
 
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+        .ai-tools-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        .ai-tools-table tbody tr:hover {
+            background: #f1f8e9;
+        }
+
+        .ai-tools-table .tool-name {
+            font-weight: 600;
+            color: #2e7d32;
+        }
+
+        .ai-tools-table .tool-description {
+            color: #555;
         }
 
         @keyframes linkRotate {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
-        }
-
-        .hobbies ul {
-            list-style: none;
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-        .hobbies li {
-            background: linear-gradient(135deg, white 0%, #f8f9fa 100%);
-            padding: 12px 24px;
-            border-radius: 25px;
-            color: #2c3e50;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-            font-weight: 500;
-            transition: all 0.3s;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hobbies li::before {
-            content: "";
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 0;
-            border-radius: 50%;
-            background: rgba(102, 126, 234, 0.2);
-            transform: translate(-50%, -50%);
-            transition: width 0.6s, height 0.6s;
-        }
-
-        .hobbies li:hover::before {
-            width: 300px;
-            height: 300px;
-        }
-
-        .hobbies li:hover {
-            transform: translateY(-3px) scale(1.05);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
 
         /* Responsive */
@@ -680,16 +652,6 @@
                 background: #e8f5e9 !important;
             }
 
-            .hobbies {
-                background: #e8f5e9 !important;
-                border: 2px solid #000;
-            }
-
-            .hobbies li {
-                background: #fff !important;
-                border: 1px solid #000;
-            }
-
             .contact-info a {
                 background: transparent !important;
                 border: 1px solid #000;
@@ -716,7 +678,7 @@
         <!-- Objective -->
         <div class="objective">
             <h2>Objective</h2>
-            <p>Aspiring to grow into a Senior Team Lead or Manager role in Cloud Operations and IT Infrastructure. Currently leading a Cloud Operations Support team at Amdocs Pune with a strong background in incident management, infrastructure monitoring, and AWS Cloud technologies. Overall, over 15 years of IT industry experience with expertise across monitoring tools, automation, and cloud-based deployments.</p>
+            <p>Aspiring to grow into a Senior Team Lead or Manager role in Cloud Operations and IT Infrastructure. Currently leading a Cloud Operations in AWS team at Amdocs Pune with a strong background in incident management, infrastructure monitoring, and AWS Cloud technologies. Overall, over 15 + years of IT industry experience with expertise across monitoring tools, automation, and cloud-based deployments.</p>
         </div>
 
         <!-- Professional Summary -->
@@ -732,11 +694,9 @@
                     </ul>
                 </div>
                 <div class="skill-category">
-                    <strong>AI-Assisted Development</strong>
+                    <strong>Config Management</strong>
                     <ul>
-                        <li>Cursor: AI chat, Composer mode</li>
-                        <li>Code generation & debugging</li>
-                        <li>Cloud deployment strategies</li>
+                        <li>Ansible</li>
                     </ul>
                 </div>
                 <div class="skill-category">
@@ -744,7 +704,7 @@
                     <ul>
                         <li>Terraform</li>
                         <li>CloudFormation</li>
-                        <li>CDK</li>
+                        <li>IAC</li>
                     </ul>
                 </div>
                 <div class="skill-category">
@@ -774,11 +734,11 @@
                     </ul>
                 </div>
                 <div class="skill-category">
-                    <strong>DevOps & Scripting</strong>
+                    <strong>Scripting</strong>
                     <ul>
                         <li>Bash scripting</li>
                         <li>GitLab, Bitbucket</li>
-                        <li>Linux server management</li>
+                        <li>Python</li>
                     </ul>
                 </div>
                 <div class="skill-category">
@@ -789,8 +749,17 @@
                         <li>High Availability design</li>
                     </ul>
                 </div>
+                <div class="skill-category">
+                    <strong>AI Tools</strong>
+                    <ul>
+                        <li>Cursor: AI chat, Composer mode</li>
+                        <li>GitHub Copilot: Code suggestions</li>
+                        <li>ChatGPT: Problem solving</li>
+                    </ul>
+                </div>
             </div>
-            <div style="margin-top: 30px; padding: 20px; background: #f8f9fa; border-radius: 8px; border-left: 4px solid #667eea;">
+            <div style="margin-top: 30px; padding: 20px; background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); border-radius: 8px; border-left: 4px solid #66bb6a; position: relative; overflow: hidden; box-shadow: 0 3px 10px rgba(129, 199, 132, 0.15);">
+                <div style="position: absolute; top: -50%; right: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(129, 199, 132, 0.15) 0%, transparent 70%); animation: linkRotate 10s linear infinite;"></div>
                 <strong style="color: #2c3e50; font-size: 1.1em;"><a href="https://nine986890806.onrender.com/" target="_blank" style="color: #2c3e50; text-decoration: none;">Link</a></strong>
             </div>
         </div>
@@ -801,7 +770,7 @@
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <div class="timeline-date">2022 – Present</div>
+                        <div class="timeline-date">Total 13 Years 10 Months</div>
                         <div class="company">Amdocs, Pune</div>
                         <h3>Technical Analyst Team Lead | Vindicia</h3>
                         <ul>
@@ -828,7 +797,7 @@
                         <ul>
                             <li>AWS Platform Expertise - EC2, VPC, EKS, Lambda, RDS, S3, and more</li>
                             <li>Kubernetes & Containers - EKS administration, container orchestration</li>
-                            <li>Infrastructure as Code - Terraform, CloudFormation, CDK</li>
+                            <li>Infrastructure as Code - Terraform, CloudFormation, IAC</li>
                             <li>Monitoring & Observability - CloudWatch, Prometheus, Grafana, ELK</li>
                             <li>CI/CD & Automation - Pipeline design, Git, deployment strategies</li>
                             <li>Reliability Engineering - HA design, chaos engineering, performance</li>
@@ -855,13 +824,20 @@
 
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <div class="timeline-date">Apr 2010 – Dec 2011</div>
-                        <div class="company">Quess Global</div>
+                        <div class="timeline-date">April 2010 to Dec 2011</div>
+                        <div class="company">Magna Infotech Pvt Ltd</div>
                         <h3>SSME – IT Infrastructure Support</h3>
                         <ul>
                             <li>Maintained uptime and monitored alerts across Linux and Windows environments.</li>
                             <li>Ensured server stability and handled P1 escalations and backup operations.</li>
                         </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">Nov 2009 - April 2010</div>
+                        <p>Planning for higher studies</p>
                     </div>
                 </div>
 
@@ -910,13 +886,6 @@
             </table>
         </div>
 
-        <!-- Hobbies -->
-        <div class="hobbies">
-            <h2>Hobbies</h2>
-            <ul>
-                <li>⚽ Playing football</li>
-            </ul>
-        </div>
     </div>
 </body>
 </html>
