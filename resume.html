@@ -322,49 +322,95 @@
 
         .timeline {
             position: relative;
-            padding-left: 40px;
+            padding-left: 30px;
         }
 
         .timeline:before {
             content: "";
             position: absolute;
-            left: 15px;
+            left: 8px;
             top: 0;
             bottom: 0;
-            width: 3px;
-            background: linear-gradient(180deg, #81c784 0%, #66bb6a 50%, #a5d6a7 100%);
+            width: 4px;
+            background: linear-gradient(180deg, #81c784 0%, #66bb6a 30%, #4caf50 60%, #66bb6a 100%);
             border-radius: 2px;
             animation: timelinePulse 2s ease-in-out infinite;
+            box-shadow: 0 0 10px rgba(102, 187, 106, 0.3);
+        }
+
+        .timeline:after {
+            content: "";
+            position: absolute;
+            left: 6px;
+            top: 0;
+            bottom: 0;
+            width: 8px;
+            background: linear-gradient(180deg, transparent 0%, rgba(129, 199, 132, 0.1) 50%, transparent 100%);
+            border-radius: 4px;
+            animation: timelineGlow 3s ease-in-out infinite;
         }
 
         @keyframes timelinePulse {
-            0%, 100% { opacity: 0.6; }
-            50% { opacity: 1; }
+            0%, 100% { opacity: 0.7; transform: scaleY(1); }
+            50% { opacity: 1; transform: scaleY(1.02); }
+        }
+
+        @keyframes timelineGlow {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.6; }
         }
 
         .timeline-item {
             position: relative;
             margin-bottom: 40px;
-            padding-left: 40px;
+            padding-left: 30px;
         }
 
         .timeline-item:before {
             content: "";
             position: absolute;
-            left: 5px;
+            left: -2px;
             top: 10px;
-            width: 20px;
-            height: 20px;
-            background: #66bb6a;
+            width: 24px;
+            height: 24px;
+            background: linear-gradient(135deg, #66bb6a 0%, #4caf50 100%);
             border: 4px solid white;
             border-radius: 50%;
-            box-shadow: 0 0 0 3px #66bb6a, 0 0 10px rgba(102, 187, 106, 0.5);
+            box-shadow: 0 0 0 3px #66bb6a, 0 0 15px rgba(102, 187, 106, 0.6), inset 0 0 10px rgba(255, 255, 255, 0.3);
             animation: dotPulse 2s ease-in-out infinite;
+            z-index: 2;
+        }
+
+        .timeline-item:after {
+            content: "✨";
+            position: absolute;
+            left: -8px;
+            top: 6px;
+            font-size: 12px;
+            animation: sparkle 2.5s ease-in-out infinite;
+            z-index: 3;
         }
 
         @keyframes dotPulse {
-            0%, 100% { transform: scale(1); box-shadow: 0 0 0 3px #66bb6a, 0 0 10px rgba(102, 187, 106, 0.5); }
-            50% { transform: scale(1.2); box-shadow: 0 0 0 5px #66bb6a, 0 0 20px rgba(102, 187, 106, 0.8); }
+            0%, 100% { 
+                transform: scale(1) rotate(0deg); 
+                box-shadow: 0 0 0 3px #66bb6a, 0 0 15px rgba(102, 187, 106, 0.6), inset 0 0 10px rgba(255, 255, 255, 0.3); 
+            }
+            50% { 
+                transform: scale(1.15) rotate(180deg); 
+                box-shadow: 0 0 0 5px #66bb6a, 0 0 25px rgba(102, 187, 106, 0.9), inset 0 0 15px rgba(255, 255, 255, 0.5); 
+            }
+        }
+
+        @keyframes sparkle {
+            0%, 100% { 
+                opacity: 0.4; 
+                transform: translateY(0) scale(0.8) rotate(0deg); 
+            }
+            50% { 
+                opacity: 1; 
+                transform: translateY(-5px) scale(1.2) rotate(180deg); 
+            }
         }
 
         .timeline-date {
@@ -554,15 +600,19 @@
             }
 
             .timeline {
-                padding-left: 30px;
+                padding-left: 25px;
             }
 
             .timeline:before {
-                left: 10px;
+                left: 6px;
             }
 
             .timeline-item:before {
-                left: -20px;
+                left: -4px;
+            }
+
+            .timeline-item:after {
+                left: -10px;
             }
 
             .skills-grid {
