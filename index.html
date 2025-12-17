@@ -6,7 +6,6 @@
     <title>Nagadev Vishwanath Janganure - Resume</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
         
         * {
             margin: 0;
@@ -16,701 +15,585 @@
 
         body {
             font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
+            line-height: 1.4;
             color: #333;
-            background: linear-gradient(135deg, #e5e5e5 0%, #f0f0f0 50%, #e5e5e5 100%);
-            background-size: 400% 400%;
-            animation: gradientShift 15s ease infinite;
-            padding: 20px;
-            min-height: 100vh;
-            position: relative;
-            overflow-x: hidden;
+            background: #f1f8e9;
+            padding: 10px;
+            font-size: 13px;
         }
 
-        @keyframes gradientShift {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        body::before {
-            content: "";
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: 
-                radial-gradient(circle at 20% 50%, rgba(129, 199, 132, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(165, 214, 167, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 40% 20%, rgba(200, 230, 201, 0.1) 0%, transparent 50%);
-            pointer-events: none;
-            z-index: 0;
-        }
-
-        .container {
-            max-width: 1100px;
+        .resume-container {
+            max-width: 8.5in;
             margin: 0 auto;
-            background: white;
-            padding: 50px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-            border-radius: 10px;
+            background: linear-gradient(135deg, #f9fff9 0%, #f1f8e9 100%);
+            padding: 15px 20px;
+            box-shadow: 0 2px 10px rgba(76, 175, 80, 0.15);
+            display: grid;
+            grid-template-columns: 35% 65%;
+            gap: 15px;
+            min-height: 11in;
             position: relative;
-            z-index: 1;
-            border: 2px solid transparent;
-            background-image: 
-                linear-gradient(white, white),
-                linear-gradient(135deg, #81c784, #66bb6a, #a5d6a7);
-            background-origin: border-box;
-            background-clip: padding-box, border-box;
         }
 
-        .container::before {
+        .resume-container::before {
             content: "";
             position: absolute;
-            top: -2px;
-            left: -2px;
-            right: -2px;
-            bottom: -2px;
-            background: linear-gradient(135deg, #81c784, #66bb6a, #a5d6a7);
-            border-radius: 10px;
-            z-index: -1;
-            opacity: 0.3;
-            animation: borderGlow 3s ease-in-out infinite;
+            top: 0;
+            right: 0;
+            width: 150px;
+            height: 150px;
+            background: radial-gradient(circle, rgba(76, 175, 80, 0.12) 0%, transparent 70%);
+            pointer-events: none;
         }
 
-        @keyframes borderGlow {
-            0%, 100% { opacity: 0.3; }
-            50% { opacity: 0.6; }
+        .resume-container::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 120px;
+            height: 120px;
+            background: radial-gradient(circle, rgba(102, 187, 106, 0.1) 0%, transparent 70%);
+            pointer-events: none;
         }
 
-        /* Header */
+        /* Header - Full Width */
         .header {
+            grid-column: 1 / -1;
             text-align: center;
-            padding: 30px 0;
-            background: linear-gradient(135deg, #c8e6c9 0%, #a5d6a7 50%, #c8e6c9 100%);
-            background-size: 200% 200%;
-            animation: headerGradient 8s ease infinite;
-            margin: -50px -50px 40px -50px;
-            border-radius: 10px 10px 0 0;
-            color: #333;
+            padding: 12px 20px;
+            background: linear-gradient(135deg, #4caf50 0%, #66bb6a 30%, #81c784 60%, #a5d6a7 100%);
+            margin: -15px -20px 10px -20px;
+            color: white;
+            border-bottom: 4px solid #2e7d32;
             position: relative;
             overflow: hidden;
-        }
-
-        @keyframes headerGradient {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(76, 175, 80, 0.4);
         }
 
         .header::before {
             content: "";
             position: absolute;
             top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-            animation: shine 3s infinite;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(255,255,255,0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 50%, rgba(255,255,255,0.15) 0%, transparent 50%),
+                repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(46, 125, 50, 0.1) 10px, rgba(46, 125, 50, 0.1) 20px);
+            pointer-events: none;
         }
 
-        @keyframes shine {
-            0% { left: -100%; }
-            100% { left: 100%; }
+        .header::after {
+            content: "✨";
+            position: absolute;
+            top: 8px;
+            right: 20px;
+            font-size: 1.1em;
+            opacity: 0.8;
+            animation: sparkle 3s ease-in-out infinite;
+        }
+
+        @keyframes sparkle {
+            0%, 100% { opacity: 0.4; transform: scale(1) rotate(0deg); }
+            50% { opacity: 0.8; transform: scale(1.2) rotate(180deg); }
         }
 
         .header h1 {
-            font-size: 1.8em;
+            font-size: 1.4em;
             font-weight: 700;
-            margin-bottom: 15px;
+            margin-bottom: 6px;
+            letter-spacing: 0.5px;
+            position: relative;
+            z-index: 1;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-            letter-spacing: 1px;
-            color: #1b5e20;
+            width: 100%;
+            max-width: 100%;
         }
 
         .contact-info {
             display: flex;
             justify-content: center;
-            gap: 25px;
+            align-items: center;
+            gap: 8px;
             flex-wrap: wrap;
-            color: #333;
-            font-size: 0.8em;
-            font-weight: 300;
+            font-size: 0.7em;
+            font-weight: 400;
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            max-width: 100%;
         }
 
         .contact-info a {
-            color: #333;
+            color: white;
             text-decoration: none;
-            padding: 5px 10px;
-            border-radius: 5px;
-            transition: all 0.3s;
-            background: rgba(0,0,0,0.05);
+            padding: 2px 5px;
+            border-radius: 3px;
+            transition: all 0.3s ease;
+            position: relative;
+            white-space: nowrap;
+        }
+
+        .contact-info a::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background: white;
+            transition: width 0.3s ease;
+        }
+
+        .contact-info a:hover::before {
+            width: 100%;
         }
 
         .contact-info a:hover {
-            background: rgba(0,0,0,0.1);
+            background: rgba(255,255,255,0.1);
             transform: translateY(-2px);
         }
 
-        /* Objective Section */
+        /* Left Sidebar */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        /* Objective */
         .objective {
-            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
-            padding: 25px;
-            border-radius: 10px;
-            margin-bottom: 40px;
-            border-left: 5px solid #66bb6a;
-            box-shadow: 0 5px 15px rgba(102, 187, 106, 0.15);
+            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 50%, #a5d6a7 100%);
+            padding: 12px;
+            border-radius: 8px;
+            border-left: 4px solid #4caf50;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(76, 175, 80, 0.2);
+        }
+
+        .objective::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(76, 175, 80, 0.2) 0%, transparent 70%);
+        }
+
+        .objective h2,
+        .objective p {
+            position: relative;
+            z-index: 1;
         }
 
         .objective h2 {
-            color: #2c3e50;
-            margin-bottom: 15px;
-            font-size: 1.0em;
+            color: #1b5e20;
+            margin-bottom: 6px;
+            font-size: 0.95em;
             font-weight: 600;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 5px;
         }
 
         .objective h2:before {
             content: "🎯";
-            font-size: 1.2em;
+            font-size: 1em;
             animation: bounce 2s ease-in-out infinite;
-            display: inline-block;
         }
 
         @keyframes bounce {
             0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-5px); }
+            50% { transform: translateY(-3px); }
         }
 
-        /* Professional Summary */
-        .summary {
-            margin-bottom: 40px;
+        .objective p {
+            font-size: 0.8em;
+            line-height: 1.3;
+            color: #555;
         }
 
-        .summary h2 {
-            color: #2c3e50;
-            margin-bottom: 25px;
-            font-size: 1.4em;
-            font-weight: 600;
-            border-bottom: 3px solid #66bb6a;
-            padding-bottom: 12px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .summary h2:before {
-            content: "💼";
-            font-size: 1.2em;
-            display: inline-block;
-        }
-
-        @keyframes rotate {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
-            margin-top: 15px;
-        }
-
-        .skill-category {
-            background: linear-gradient(135deg, #ffffff 0%, #f1f8e9 100%);
-            padding: 20px;
+        /* Skills Section */
+        .skills-section {
+            background: linear-gradient(135deg, #f1f8e9 0%, #e8f5e9 50%, #c8e6c9 100%);
+            padding: 12px;
             border-radius: 8px;
-            border-left: 4px solid #81c784;
-            box-shadow: 0 3px 10px rgba(129, 199, 132, 0.1);
-            transition: all 0.3s;
+            border-left: 4px solid #66bb6a;
             position: relative;
             overflow: hidden;
+            box-shadow: 0 2px 10px rgba(102, 187, 106, 0.2);
         }
 
-        .skill-category::before {
+        .skills-section::after {
             content: "";
             position: absolute;
             top: 0;
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(129, 199, 132, 0.15), transparent);
+            background: linear-gradient(90deg, transparent, rgba(76, 175, 80, 0.2), transparent);
             transition: left 0.5s;
         }
 
-        .skill-category:hover::before {
+        .skills-section:hover::after {
             left: 100%;
         }
 
-        .skill-category:hover {
-            transform: translateY(-3px) scale(1.02);
-            box-shadow: 0 5px 20px rgba(129, 199, 132, 0.3);
-            border-left-width: 6px;
-        }
 
-        .skill-category strong::before {
-            content: "▸ ";
-            color: #66bb6a;
-            font-weight: bold;
-            margin-right: 5px;
-        }
-
-        .skill-category strong {
-            color: #2c3e50;
-            display: block;
-            margin-bottom: 12px;
-            font-size: 0.9em;
+        .skills-section h2 {
+            color: #1b5e20;
+            margin-bottom: 8px;
+            font-size: 0.95em;
             font-weight: 600;
-        }
-
-        .skill-category ul {
-            list-style: disc;
-            padding-left: 20px;
-        }
-
-        .skill-category li {
-            padding: 5px 0;
-        }
-
-        /* Timeline */
-        .timeline-section {
-            margin-bottom: 50px;
-        }
-
-        .timeline-section h2 {
-            color: #2c3e50;
-            margin-bottom: 35px;
-            font-size: 1.4em;
-            font-weight: 600;
-            border-bottom: 3px solid #66bb6a;
-            padding-bottom: 12px;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 5px;
+            border-bottom: 3px solid #4caf50;
+            padding-bottom: 4px;
         }
 
-        .timeline-section h2:before {
-            content: "📅";
-            font-size: 1.0em;
+        .skills-section h2:before {
+            content: "💼";
+            font-size: 1em;
         }
 
-        .timeline-section.experience-section h2:before {
-            content: "15+ years";
-            font-size: 0.5em;
+        .skill-item {
+            margin-bottom: 8px;
+        }
+
+        .skill-item strong {
+            color: #1b5e20;
+            font-size: 0.8em;
+            display: block;
+            margin-bottom: 3px;
             font-weight: 600;
-            color: #2e7d32;
-            background: rgba(129, 199, 132, 0.2);
-            padding: 4px 10px;
-            border-radius: 15px;
-            margin-right: 5px;
         }
 
-        .timeline-section.education-section h2:before {
-            content: "🎓";
-            font-size: 1.2em;
-            animation: float 3s ease-in-out infinite;
-            display: inline-block;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-8px); }
-        }
-
-        .timeline {
-            position: relative;
-            padding-left: 30px;
-        }
-
-        .timeline:before {
-            content: "";
-            position: absolute;
-            left: 8px;
-            top: 0;
-            bottom: 0;
-            width: 4px;
-            background: linear-gradient(180deg, #81c784 0%, #66bb6a 30%, #4caf50 60%, #66bb6a 100%);
-            border-radius: 2px;
-            animation: timelinePulse 2s ease-in-out infinite;
-            box-shadow: 0 0 10px rgba(102, 187, 106, 0.3);
-        }
-
-        .timeline:after {
-            content: "";
-            position: absolute;
-            left: 6px;
-            top: 0;
-            bottom: 0;
-            width: 8px;
-            background: linear-gradient(180deg, transparent 0%, rgba(129, 199, 132, 0.1) 50%, transparent 100%);
-            border-radius: 4px;
-            animation: timelineGlow 3s ease-in-out infinite;
-        }
-
-        @keyframes timelinePulse {
-            0%, 100% { opacity: 0.7; transform: scaleY(1); }
-            50% { opacity: 1; transform: scaleY(1.02); }
-        }
-
-        @keyframes timelineGlow {
-            0%, 100% { opacity: 0.3; }
-            50% { opacity: 0.6; }
-        }
-
-        .timeline-item {
-            position: relative;
-            margin-bottom: 40px;
-            padding-left: 30px;
-        }
-
-        .timeline-item:before {
-            content: "";
-            position: absolute;
-            left: -2px;
-            top: 10px;
-            width: 24px;
-            height: 24px;
-            background: linear-gradient(135deg, #66bb6a 0%, #4caf50 100%);
-            border: 4px solid white;
-            border-radius: 50%;
-            box-shadow: 0 0 0 3px #66bb6a, 0 0 15px rgba(102, 187, 106, 0.6), inset 0 0 10px rgba(255, 255, 255, 0.3);
-            animation: dotPulse 2s ease-in-out infinite;
-            z-index: 2;
-        }
-
-        .timeline-item:after {
-            content: "✨";
-            position: absolute;
-            left: -8px;
-            top: 6px;
-            font-size: 12px;
-            animation: sparkle 2.5s ease-in-out infinite;
-            z-index: 3;
-        }
-
-        @keyframes dotPulse {
-            0%, 100% { 
-                transform: scale(1) rotate(0deg); 
-                box-shadow: 0 0 0 3px #66bb6a, 0 0 15px rgba(102, 187, 106, 0.6), inset 0 0 10px rgba(255, 255, 255, 0.3); 
-            }
-            50% { 
-                transform: scale(1.15) rotate(180deg); 
-                box-shadow: 0 0 0 5px #66bb6a, 0 0 25px rgba(102, 187, 106, 0.9), inset 0 0 15px rgba(255, 255, 255, 0.5); 
-            }
-        }
-
-        @keyframes sparkle {
-            0%, 100% { 
-                opacity: 0.4; 
-                transform: translateY(0) scale(0.8) rotate(0deg); 
-            }
-            50% { 
-                opacity: 1; 
-                transform: translateY(-5px) scale(1.2) rotate(180deg); 
-            }
-        }
-
-        .timeline-date {
-            display: inline-block;
-            color: #2e7d32;
-            font-weight: 600;
+        .skill-item ul {
+            list-style: none;
+            padding-left: 0;
             font-size: 0.7em;
-            background: linear-gradient(135deg, rgba(129, 199, 132, 0.2), rgba(165, 214, 167, 0.2));
-            padding: 5px 12px;
-            border-radius: 20px;
-            margin-bottom: 12px;
-            writing-mode: horizontal-tb;
-            position: relative;
-            border: 1px solid rgba(102, 187, 106, 0.4);
-            box-shadow: 0 2px 5px rgba(102, 187, 106, 0.2);
+            line-height: 1.4;
         }
 
-        .timeline-date::before {
-            content: "📅";
-            margin-right: 5px;
-            font-size: 0.9em;
-        }
-
-        .timeline-content {
-            background: linear-gradient(135deg, #ffffff 0%, #f1f8e9 100%);
-            padding: 25px;
-            border-radius: 10px;
-            border-left: 5px solid #81c784;
-            transition: all 0.3s ease;
-            box-shadow: 0 3px 10px rgba(129, 199, 132, 0.1);
-        }
-
-        .timeline-content:hover {
-            transform: translateX(8px) translateY(-2px);
-            box-shadow: 0 8px 25px rgba(129, 199, 132, 0.25);
-            border-left-width: 6px;
-        }
-
-        .timeline-content h3 {
-            color: #2c3e50;
-            margin-bottom: 5px;
-            font-size: 1.0em;
-        }
-
-        .timeline-content .company {
-            color: #2e7d32;
-            font-weight: 600;
-            margin-bottom: 5px;
-            font-size: 0.85em;
-        }
-
-        .timeline-content .role {
-            color: #7f8c8d;
-            font-style: italic;
-            margin-bottom: 15px;
-        }
-
-        .timeline-content ul {
-            list-style: disc;
-            padding-left: 20px;
-        }
-
-        .timeline-content li {
-            padding: 5px 0;
+        .skill-item li {
+            padding: 1px 0;
             color: #555;
         }
 
-        /* Education Table */
-        .education-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-            background: white;
-            border-radius: 10px;
+        .skill-item li:before {
+            content: "▸ ";
+            color: #4caf50;
+            font-weight: bold;
+            transition: transform 0.2s;
+            font-size: 1.1em;
+        }
+
+        .skill-item li:hover:before {
+            transform: translateX(3px);
+        }
+
+        /* Link Section */
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .link-section {
+            background: linear-gradient(135deg, #f1f8e9 0%, #e8f5e9 50%, #c8e6c9 100%);
+            padding: 10px;
+            border-radius: 8px;
+            border-left: 4px solid #66bb6a;
+            text-align: center;
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
             overflow: hidden;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(102, 187, 106, 0.2);
         }
 
-        .education-table thead {
-            background: linear-gradient(135deg, #a5d6a7 0%, #81c784 100%);
-            color: #2c3e50;
+        .link-section::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(76, 175, 80, 0.2), transparent);
+            transition: left 0.5s;
         }
 
-        .education-table th {
-            padding: 15px;
-            text-align: left;
+        .link-section:hover::after {
+            left: 100%;
+        }
+
+        .link-section a {
+            color: #1b5e20;
+            text-decoration: none;
             font-weight: 600;
             font-size: 0.8em;
+            line-height: 1.2;
+            white-space: nowrap;
+            position: relative;
+            z-index: 1;
+            transition: all 0.3s ease;
         }
 
-        .education-table td {
-            padding: 15px;
-            border-bottom: 1px solid #e0e0e0;
-            color: #333;
+        .link-section:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
         }
 
-        .education-table tbody tr:last-child td {
-            border-bottom: none;
-        }
-
-        .education-table tbody tr:hover {
-            background: #f8f9fa;
-        }
-
-        .education-table .degree {
-            font-weight: 600;
-            color: #2c3e50;
-        }
-
-        .education-table .institution {
+        .link-section a:hover {
             color: #2e7d32;
-            font-weight: 500;
         }
 
-        .education-table .percentage {
-            color: #10b981;
+        /* Education */
+        .education-section {
+            background: linear-gradient(135deg, #f1f8e9 0%, #e8f5e9 100%);
+            padding: 10px;
+            border-radius: 5px;
+            border-left: 3px solid #66bb6a;
+        }
+
+        .education-section h2 {
+            color: #2e7d32;
+            margin-bottom: 8px;
+            font-size: 0.9em;
             font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            border-bottom: 2px solid #66bb6a;
+            padding-bottom: 4px;
         }
 
-        /* AI Tools Table */
-        .ai-tools-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 3px 10px rgba(129, 199, 132, 0.1);
-        }
-
-        .ai-tools-table thead {
-            background: linear-gradient(135deg, #a5d6a7 0%, #81c784 100%);
-            color: #2c3e50;
-        }
-
-        .ai-tools-table th {
-            padding: 15px;
-            text-align: left;
-            font-weight: 600;
+        .education-section h2:before {
+            content: "🎓";
             font-size: 0.9em;
         }
 
-        .ai-tools-table td {
-            padding: 15px;
-            border-bottom: 1px solid #e0e0e0;
-            color: #333;
+        .education-item {
+            margin-bottom: 6px;
+            font-size: 0.7em;
+            line-height: 1.4;
         }
 
-        .ai-tools-table tbody tr:last-child td {
-            border-bottom: none;
-        }
-
-        .ai-tools-table tbody tr:hover {
-            background: #f1f8e9;
-        }
-
-        .ai-tools-table .tool-name {
-            font-weight: 600;
+        .education-item strong {
             color: #2e7d32;
+            display: block;
         }
 
-        .ai-tools-table .tool-description {
+        .education-item span {
             color: #555;
         }
 
-        @keyframes linkRotate {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+        /* Main Content Area */
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        /* Experience Section */
+        .experience-section {
+            background: linear-gradient(135deg, #f1f8e9 0%, #e8f5e9 50%, #c8e6c9 100%);
+            padding: 12px;
+            border-radius: 8px;
+            border-left: 4px solid #66bb6a;
+            position: relative;
+            box-shadow: 0 2px 10px rgba(102, 187, 106, 0.2);
+        }
+
+
+        .experience-section h2 {
+            color: #1b5e20;
+            margin-bottom: 10px;
+            font-size: 1.05em;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            border-bottom: 3px solid #4caf50;
+            padding-bottom: 4px;
+        }
+
+        .experience-section h2:before {
+            content: "📅";
+            font-size: 1em;
+        }
+
+        .experience-item {
+            margin-bottom: 10px;
+            padding-bottom: 8px;
+            border-bottom: 1px dashed #ccc;
+            position: relative;
+            padding-left: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .experience-item::before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            top: 5px;
+            color: #4caf50;
+            font-weight: bold;
+            font-size: 1.3em;
+            transition: transform 0.3s;
+        }
+
+        .experience-item:hover::before {
+            transform: translateX(5px);
+        }
+
+        .experience-item:hover {
+            padding-left: 18px;
+            background: rgba(76, 175, 80, 0.12);
+            border-radius: 5px;
+            padding-top: 4px;
+            padding-bottom: 8px;
+        }
+
+        .experience-item:last-child {
+            border-bottom: none;
+        }
+
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 4px;
+        }
+
+        .exp-date {
+            color: #1b5e20;
+            font-weight: 600;
+            font-size: 0.75em;
+            white-space: nowrap;
+            margin-left: 8px;
+            background: rgba(76, 175, 80, 0.2);
+            padding: 3px 10px;
+            border-radius: 15px;
+            border: 1px solid #4caf50;
+        }
+
+        .exp-title {
+            color: #1b5e20;
+            font-weight: 600;
+            font-size: 0.9em;
+            margin-bottom: 2px;
+        }
+
+        .exp-company {
+            color: #555;
+            font-size: 0.75em;
+            font-style: italic;
+            margin-bottom: 4px;
+        }
+
+        .exp-description {
+            font-size: 0.7em;
+            line-height: 1.4;
+            color: #555;
+        }
+
+        .exp-description ul {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 4px;
+        }
+
+        .exp-description li {
+            padding: 2px 0;
+            padding-left: 12px;
+            position: relative;
+        }
+
+        .exp-description li:before {
+            content: "•";
+            color: #4caf50;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            transition: all 0.2s;
+            font-size: 1.3em;
+        }
+
+        .exp-description li:hover:before {
+            color: #2e7d32;
+            transform: scale(1.4);
+        }
+
+        .exp-description li:hover {
+            color: #1b5e20;
+            padding-left: 15px;
+        }
+
+        /* Compact list for some items */
+        .compact-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2px 8px;
+            font-size: 0.7em;
+        }
+
+        .compact-list li {
+            padding: 1px 0;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .resume-container {
+                max-width: 100%;
+                padding: 10px 15px;
+                box-shadow: none;
+                min-height: 11in;
+                page-break-inside: avoid;
+            }
+
+            .header {
+                margin: -10px -15px 8px -15px;
+            }
+
+            .experience-item,
+            .skill-item,
+            .education-item {
+                page-break-inside: avoid;
+            }
         }
 
         /* Responsive */
         @media (max-width: 768px) {
-            .container {
-                padding: 20px;
-            }
-
-            .header h1 {
-                font-size: 1.6em;
-            }
-
-            .timeline-date {
-                position: static;
-                width: auto;
-                text-align: left;
-                margin-bottom: 10px;
-                font-size: 0.65em;
-            }
-
-            .timeline {
-                padding-left: 25px;
-            }
-
-            .timeline:before {
-                left: 6px;
-            }
-
-            .timeline-item:before {
-                left: -4px;
-            }
-
-            .timeline-item:after {
-                left: -10px;
-            }
-
-            .skills-grid {
+            .resume-container {
                 grid-template-columns: 1fr;
-            }
-        }
-
-        @media print {
-            body {
-                background: #e8f5e9;
-                padding: 0;
-            }
-
-            .container {
-                box-shadow: none;
-                background: #e8f5e9;
-                border: 2px solid #000;
-                padding: 30px;
             }
 
             .header {
-                background: #e8f5e9 !important;
-                border-bottom: 2px solid #000;
-            }
-
-            .objective {
-                background: #e8f5e9 !important;
-                border: 2px solid #000;
-                border-left: 5px solid #000;
-            }
-
-            .summary {
-                border-bottom: 2px solid #000;
-            }
-
-            .skill-category {
-                background: #e8f5e9 !important;
-                border: 2px solid #000;
-                border-left: 4px solid #000;
-            }
-
-            .timeline-section h2 {
-                border-bottom: 2px solid #000;
-            }
-
-            .timeline:before {
-                background: #000 !important;
-            }
-
-            .timeline-item:before {
-                background: #000 !important;
-                border: 2px solid #000;
-            }
-
-            .timeline-content {
-                background: #e8f5e9 !important;
-                border: 2px solid #000;
-                border-left: 5px solid #000;
-            }
-
-            .timeline-content:hover {
-                transform: none;
-            }
-
-            .timeline-date {
-                background: #fff !important;
-                border: 2px solid #000;
-                color: #000 !important;
-            }
-
-            .education-table {
-                background: #e8f5e9 !important;
-                border: 2px solid #000;
-            }
-
-            .education-table thead {
-                background: #000 !important;
-                color: #e8f5e9 !important;
-            }
-
-            .education-table th,
-            .education-table td {
-                border: 1px solid #000;
-            }
-
-            .education-table tbody tr {
-                background: #e8f5e9 !important;
-            }
-
-            .contact-info a {
-                background: transparent !important;
-                border: 1px solid #000;
+                grid-column: 1;
             }
         }
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="resume-container">
         <!-- Header -->
         <div class="header">
             <h1>Nagadev Vishwanath Janganure</h1>
@@ -719,37 +602,39 @@
                 <span>|</span>
                 <a href="mailto:pnj9986@gmail.com">pnj9986@gmail.com</a>
                 <span>|</span>
-                <a href="https://www.linkedin.com/in/nj9986890806" target="_blank">LinkedIn Profile</a>
+                <a href="https://www.linkedin.com/in/nj9986890806" target="_blank">LinkedIn</a>
                 <span>|</span>
-                <a href="https://nine986890806.onrender.com/" target="_blank">Link</a>
+                <a href="https://nine986890806.onrender.com/" target="_blank">Portfolio</a>
             </div>
         </div>
 
-        <!-- Objective -->
-        <div class="objective">
-            <h2>Objective</h2>
-            <p>Aspiring to grow into a Senior Team Lead or Manager role in Cloud Operations and IT Infrastructure. Currently leading a Cloud Operations in AWS team at Amdocs Pune with a strong background in incident management, infrastructure monitoring, and AWS Cloud technologies. Overall, over 15 + years of IT industry experience with expertise across monitoring tools, automation, and cloud-based deployments.</p>
-        </div>
+        <!-- Left Sidebar -->
+        <div class="sidebar">
+            <!-- Objective -->
+            <div class="objective">
+                <h2>Objective</h2>
+                <p>Aspiring to grow into a Senior Team Lead or Manager role in Cloud Operations and IT Infrastructure. Currently leading a Cloud Operations in AWS team at Amdocs Pune with a strong background in incident management, infrastructure monitoring, and AWS Cloud technologies. Overall, over 15+ years of IT industry experience with expertise across monitoring tools, automation, and cloud-based deployments.</p>
+            </div>
 
-        <!-- Professional Summary -->
-        <div class="summary">
-            <h2>Professional Summary</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
+            <!-- Skills -->
+            <div class="skills-section">
+                <h2>Skills</h2>
+                <div class="skill-item">
                     <strong>AWS Cloud</strong>
                     <ul>
-                        <li>6+ years of experience</li>
-                        <li>Troubleshooting & Deployment</li>
                         <li>EC2, VPC, EKS, Lambda, RDS, S3</li>
+                        <li>Troubleshooting & Deployment</li>
                     </ul>
                 </div>
-                <div class="skill-category">
-                    <strong>Config Management</strong>
+                <div class="skill-item">
+                    <strong>AI-Assisted Development</strong>
                     <ul>
-                        <li>Ansible</li>
+                        <li>Cursor: AI chat, Composer</li>
+                        <li>Code generation & debugging</li>
+                        <li>Cloud deployment strategies</li>
                     </ul>
                 </div>
-                <div class="skill-category">
+                <div class="skill-item">
                     <strong>Infrastructure as Code</strong>
                     <ul>
                         <li>Terraform</li>
@@ -757,16 +642,15 @@
                         <li>IAC</li>
                     </ul>
                 </div>
-                <div class="skill-category">
+                <div class="skill-item">
                     <strong>CI/CD & Automation</strong>
                     <ul>
-                        <li>GitHub Actions</li>
-                        <li>GitLab CI</li>
+                        <li>GitHub Actions, GitLab CI</li>
                         <li>AWS Code Pipeline</li>
                         <li>Jenkins, Rundeck</li>
                     </ul>
                 </div>
-                <div class="skill-category">
+                <div class="skill-item">
                     <strong>Monitoring & Observability</strong>
                     <ul>
                         <li>Prometheus, Grafana</li>
@@ -774,24 +658,23 @@
                         <li>Micro Focus OVO</li>
                     </ul>
                 </div>
-                <div class="skill-category">
+                <div class="skill-item">
                     <strong>Container & Orchestration</strong>
                     <ul>
                         <li>Kubernetes (EKS)</li>
-                        <li>Docker</li>
-                        <li>Podman</li>
+                        <li>Docker, Podman</li>
                         <li>Container orchestration</li>
                     </ul>
                 </div>
-                <div class="skill-category">
-                    <strong>Scripting</strong>
+                <div class="skill-item">
+                    <strong>DevOps & Scripting</strong>
                     <ul>
                         <li>Bash scripting</li>
                         <li>GitLab, Bitbucket</li>
                         <li>Python</li>
                     </ul>
                 </div>
-                <div class="skill-category">
+                <div class="skill-item">
                     <strong>Best Practices</strong>
                     <ul>
                         <li>Security & Compliance</li>
@@ -799,34 +682,35 @@
                         <li>High Availability design</li>
                     </ul>
                 </div>
-                <div class="skill-category">
-                    <strong>AI Tools</strong>
-                    <ul>
-                        <li>Cursor: AI chat, Composer mode</li>
-                        <li>GitHub Copilot: Code suggestions</li>
-                        <li>ChatGPT: Problem solving</li>
-                    </ul>
+            </div>
+
+            <!-- Links Container -->
+            <div class="links-container">
+                <div class="link-section">
+                    <a href="https://nine986890806.onrender.com/" target="_blank">🌐 View Online Resume</a>
+                </div>
+                <div class="link-section">
+                    <a href="https://uvce.ac.in/" target="_blank">Engineering Degree from UVCE, Bangalore 2005 – 2009</a>
                 </div>
             </div>
-            <div style="margin-top: 30px; padding: 20px; background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); border-radius: 8px; border-left: 4px solid #66bb6a; position: relative; overflow: hidden; box-shadow: 0 3px 10px rgba(129, 199, 132, 0.15);">
-                <div style="position: absolute; top: -50%; right: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(129, 199, 132, 0.15) 0%, transparent 70%); animation: linkRotate 10s linear infinite;"></div>
-                <strong style="color: #2c3e50; font-size: 1.1em; position: relative; z-index: 1;">
-                    <a href="https://nine986890806.onrender.com/" target="_blank" style="color: #2c3e50; text-decoration: none; transition: all 0.3s; display: inline-block;">
-                        🔗 Link <i class="fas fa-external-link-alt" style="font-size: 0.8em; margin-left: 5px;"></i>
-                    </a>
-                </strong>
-            </div>
+
         </div>
 
-        <!-- Professional Experience Timeline -->
-        <div class="timeline-section experience-section">
-            <h2>Professional Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-date">Total 13 Years 10 Months</div>
-                        <div class="company">Amdocs, Pune</div>
-                        <h3>Technical Analyst Team Lead | Vindicia</h3>
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Professional Experience -->
+            <div class="experience-section">
+                <h2>Professional Experience</h2>
+                
+                <div class="experience-item">
+                    <div class="exp-header">
+                        <div>
+                            <div class="exp-title">Technical Analyst Team Lead | Vindicia</div>
+                            <div class="exp-company">Amdocs, Pune</div>
+                        </div>
+                        <div class="exp-date">2022 – Present</div>
+                    </div>
+                    <div class="exp-description">
                         <ul>
                             <li>Acted as Incident Manager for major and critical incidents ensuring timely resolution and communication. Acting SRE Lead to get the cloud-based applications up and running.</li>
                             <li>Led technical bridge calls and coordinated with cross-functional teams to resolve high-priority incidents.</li>
@@ -843,29 +727,37 @@
                     </div>
                 </div>
 
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-date">2019 – 2022</div>
-                        <div class="company">Amdocs, Pune</div>
-                        <h3>Technology Specialist</h3>
+                <div class="experience-item">
+                    <div class="exp-header">
+                        <div>
+                            <div class="exp-title">Technology Specialist</div>
+                            <div class="exp-company">Amdocs, Pune</div>
+                        </div>
+                        <div class="exp-date">2019 – 2022</div>
+                    </div>
+                    <div class="exp-description">
                         <ul>
-                            <li>AWS Platform Expertise - EC2, VPC, EKS, Lambda, RDS, S3, and more</li>
-                            <li>Kubernetes & Containers - EKS administration, container orchestration</li>
-                            <li>Infrastructure as Code - Terraform, CloudFormation, IAC</li>
-                            <li>Monitoring & Observability - CloudWatch, Prometheus, Grafana, ELK</li>
-                            <li>CI/CD & Automation - Pipeline design, Git, deployment strategies</li>
-                            <li>Reliability Engineering - HA design, chaos engineering, performance</li>
-                            <li>Security - IAM, encryption, compliance, security tools</li>
-                            <li>Incident Management - On-call, post-mortems, response procedures</li>
+                            <li>AWS: EC2, VPC, EKS, Lambda, RDS, S3</li>
+                            <li>Kubernetes & Container orchestration (EKS)</li>
+                            <li>Infrastructure as Code: Terraform, CloudFormation, IAC</li>
+                            <li>Monitoring: CloudWatch, Prometheus, Grafana, ELK</li>
+                            <li>CI/CD: Pipeline design, Git, deployment automation</li>
+                            <li>Reliability: HA design, chaos engineering, performance optimization</li>
+                            <li>Security: IAM, encryption, compliance</li>
+                            <li>Incident Management: On-call, post-mortems, response procedures</li>
                         </ul>
                     </div>
                 </div>
 
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-date">2012 – 2019</div>
-                        <div class="company">Amdocs, Pune</div>
-                        <h3>Technology Monitoring Engineer</h3>
+                <div class="experience-item">
+                    <div class="exp-header">
+                        <div>
+                            <div class="exp-title">Technology Monitoring Engineer</div>
+                            <div class="exp-company">Amdocs, Pune</div>
+                        </div>
+                        <div class="exp-date">2012 – 2019</div>
+                    </div>
+                    <div class="exp-description">
                         <ul>
                             <li>Administered HP Operations Manager, SiteScope, and BSM tools for IT monitoring.</li>
                             <li>Integrated third-party tools with Micro Focus Ops Bridge Suite and configured SNMP alerts.</li>
@@ -876,11 +768,15 @@
                     </div>
                 </div>
 
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-date">April 2010 to Dec 2011</div>
-                        <div class="company">Magna Infotech Pvt Ltd</div>
-                        <h3>SSME – IT Infrastructure Support</h3>
+                <div class="experience-item">
+                    <div class="exp-header">
+                        <div>
+                            <div class="exp-title">SSME – IT Infrastructure Support</div>
+                            <div class="exp-company">Quess Global</div>
+                        </div>
+                        <div class="exp-date">Apr 2010 – Dec 2011</div>
+                    </div>
+                    <div class="exp-description">
                         <ul>
                             <li>Maintained uptime and monitored alerts across Linux and Windows environments.</li>
                             <li>Ensured server stability and handled P1 escalations and backup operations.</li>
@@ -888,59 +784,23 @@
                     </div>
                 </div>
 
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-date">Nov 2009 - April 2010</div>
-                        <p>Planning for higher studies</p>
+                <div class="experience-item">
+                    <div class="exp-header">
+                        <div>
+                            <div class="exp-title">IT Support Associate</div>
+                            <div class="exp-company">Dell International Services, Bangalore</div>
+                        </div>
+                        <div class="exp-date">Mar 2009 – Oct 2009</div>
                     </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-date">Mar 2009 – Oct 2009</div>
-                        <div class="company">Dell International Services, Bangalore</div>
-                        <h3>IT Support Associate</h3>
+                    <div class="exp-description">
                         <ul>
-                            <li>Provided application and IT tech support.</li>
+                            <li>Provided application and software support.</li>
                             <li>Managed bridge calls, technical escalations, and cross-team coordination.</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- Education Table -->
-        <div class="timeline-section education-section">
-            <h2>Education</h2>
-            <table class="education-table">
-                <thead>
-                    <tr>
-                        <th>Degree/Qualification</th>
-                        <th>Institution</th>
-                        <th>Year</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="degree">Bachelor of Engineering</td>
-                        <td class="institution">UVCE, Bangalore</td>
-                        <td>2005 – 2009</td>
-                    </tr>
-                    <tr>
-                        <td class="degree">12th Standard</td>
-                        <td class="institution">GSS Belgaum</td>
-                        <td>2003 – 2005</td>
-                    </tr>
-                    <tr>
-                        <td class="degree">10th Standard</td>
-                        <td class="institution">St. Paul's High School, Belgaum</td>
-                        <td>2002 - 2003</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
     </div>
 </body>
 </html>
-
